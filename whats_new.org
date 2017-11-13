@@ -104,6 +104,7 @@ https://glimmerjs.com/
 Glimmer is a flexible, low-level rendering pipeline for building a "live" DOM from Handlebars templates that can subsequently be updated cheaply when data changes.
 Extracted from Ember as indepedent project.
 
+#+attr_html: :width 100%
 [[./assets/glimmer.png]]
 
 Build in TypeScript, compiling to bytecode.
