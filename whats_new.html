@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-11-13 Mon 15:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Marek" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+	     margin-bottom: .2em; }
+  .subtitle { text-align: center;
+	      font-size: medium;
+	      font-weight: bold;
+	      margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+	    padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org13a3605">1. Reactive Conf 2017 Highlights</a>
+<ul>
+<li><a href="#org9948331">1.1. David Nolen on Datomic and Simplicity</a>
+<ul>
+<li><a href="#org9a62349">1.1.1. Datomic</a></li>
+<li><a href="#org989ac46">1.1.2. Go</a></li>
+</ul>
+</li>
+<li><a href="#orge5fa016">1.2. RON: Replicated Object Notation - Victor Grishchenko</a>
+<ul>
+<li><a href="#orgcab0349">1.2.1. Better ?</a></li>
+</ul>
+</li>
+<li><a href="#orgb54f4fd">1.3. Reason: JavaScript-flavored OCaml - Jared Forsyth</a>
+<ul>
+<li><a href="#org0c8bc07">1.3.1. Variant data type</a></li>
+<li><a href="#org65045e8">1.3.2. undefined method `id' for nil:NilClass</a></li>
+</ul>
+</li>
+<li><a href="#org97f1568">1.4. Secrets of the Glimmer VM - Tom Dale</a></li>
+<li><a href="#org2bee099">1.5. More</a>
+<ul>
+<li><a href="#orga6d46f3">1.5.1. Property based testing</a></li>
+<li><a href="#org095854e">1.5.2. CSS as Bytecode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13a3605" class="outline-2">
+<h2 id="org13a3605"><span class="section-number-2">1</span> Reactive Conf 2017 Highlights</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9948331" class="outline-3">
+<h3 id="org9948331"><span class="section-number-3">1.1</span> David Nolen on Datomic and Simplicity</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+When considered next to testing and reasoning, simplicity
+is more important than either. Given a stark choice between investment
+in testing and investment in simplicity, the latter may often be the better
+choice because it will facilitate all future attempts to understand the system
+attempts of any kind.
+</p>
+
+<p>
+<a href="http://curtclifton.net/papers/MoseleyMarks06a.pdf">Out of the Tar Pit - Ben Moseley, Peter Marks (2006)</a>
+</p>
+</div>
+
+<div id="outline-container-org9a62349" class="outline-4">
+<h4 id="org9a62349"><span class="section-number-4">1.1.1</span> Datomic</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Datomic is a distributed database and implementation of Datalog on Clojure.
+Datalog is a declarative logic programming language that syntactically is a subset of Prolog
+<a href="https://en.wikipedia.org/wiki/Datomic">https://en.wikipedia.org/wiki/Datomic</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org989ac46" class="outline-4">
+<h4 id="org989ac46"><span class="section-number-4">1.1.2</span> Go</h4>
+<div class="outline-text-4" id="text-1-1-2">
+
+<div class="figure">
+<p><img src="./assets/david_go.jpeg" alt="david_go.jpeg" width="100%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orge5fa016" class="outline-3">
+<h3 id="orge5fa016"><span class="section-number-3">1.2</span> RON: Replicated Object Notation - Victor Grishchenko</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Argument against using JSON everywhere because:
+</p>
+
+<ul class="org-ul">
+<li>optimized for human readability not for computers</li>
+<li>is bloated</li>
+<li>weak (missin uuid [universally unique identifier], versioning..)</li>
+</ul>
+</div>
+
+<div id="outline-container-orgcab0349" class="outline-4">
+<h4 id="orgcab0349"><span class="section-number-4">1.2.1</span> Better ?</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Swarm Replicated Object Notation is a distributed data serialization format.
+Implicitly, formats like XML or JSON assume a lump of state being delivered from a server to a client &#x2013; once and in one piece.
+RON aims to synchronize replicas by delivering a stream of changes &#x2013; continuously and incrementally.
+With RON, even an object's state is seen as a batch of compacted changes, with more changes coming.
+</p>
+
+<p>
+<a href="https://github.com/gritzko/swarm-ron">https://github.com/gritzko/swarm-ron</a>
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgb54f4fd" class="outline-3">
+<h3 id="orgb54f4fd"><span class="section-number-3">1.3</span> Reason: JavaScript-flavored OCaml - Jared Forsyth</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+<a href="https://reasonml.github.io/">https://reasonml.github.io/</a>
+</p>
+
+<p>
+Caml (originally an acronym for Categorical abstract machine language) is a multi-paradigm, general-purpose programming language which is a dialect of the ML programming language family.
+Caml was developed in France at INRIA and EN.S
+</p>
+
+<p>
+OCaml (Objective Caml) - implementation of Caml
+</p>
+
+<p>
+Reason - an alternate syntax (interface) for OCaml that uses Bucklescript compiler backend to output JS.
+</p>
+
+<p>
+BuckleScript - A backend for the OCaml compiler which emits JavaScript.
+</p>
+
+<p>
+JavaScript
+</p>
+
+<p>
+<a href="https://reasonml.github.io/guide/what-and-why">https://reasonml.github.io/guide/what-and-why</a>
+</p>
+</div>
+
+
+<div id="outline-container-org0c8bc07" class="outline-4">
+<h4 id="org0c8bc07"><span class="section-number-4">1.3.1</span> Variant data type</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<pre class="example">
+
+
+type account =
+  | None
+  | Instagram(string)
+  | Facebook(string, int);
+
+let myAccount = Facebook("Josh", 26);
+let friendAccount = Instagram("Jenny");
+
+
+let greeting =
+  switch myAccount {
+  | None =&gt; "Hi!"
+  | Facebook(name, age) =&gt; "Hi " ++ name ++ ", you're " ++ string_of_int(age) ++ "-year-old."
+  | Instagram(name) =&gt; "Hello " ++ name ++ "!"
+  };
+
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org65045e8" class="outline-4">
+<h4 id="org65045e8"><span class="section-number-4">1.3.2</span> undefined method `id' for nil:NilClass</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<pre class="example">
+
+type option('a) = None | Some('a);
+
+</pre>
+
+<p>
+This is the convention used to simulate a "nullable" (aka undefined or null) value in other languages.
+Thanks to this convenience type definition, Reason can default every value to be non-nullable.
+An int will always be an int, never "int or null or undefined". If you do want to express a "nullable int", you'd use option(int),
+ whose possible values are None or Some(int).
+switch forces you to handle both cases; therefore, a pure Reason program doesn't have null errors.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org97f1568" class="outline-3">
+<h3 id="org97f1568"><span class="section-number-3">1.4</span> Secrets of the Glimmer VM - Tom Dale</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+<a href="https://glimmerjs.com/">https://glimmerjs.com/</a>
+</p>
+
+<p>
+Glimmer is a flexible, low-level rendering pipeline for building a "live" DOM from Handlebars templates that can subsequently be updated cheaply when data changes.
+Extracted from Ember as indepedent project.
+</p>
+
+
+<div class="figure">
+<p><img src="./assets/glimmer.png" alt="glimmer.png" />
+</p>
+</div>
+
+<p>
+Build in TypeScript, compiling to bytecode.
+</p>
+
+<p>
+The Glimmer VM: Boots Fast and Stays Fast
+</p>
+
+<p>
+<a href="http://yehudakatz.com/2017/04/05/the-glimmer-vm-boots-fast-and-stays-fast/">http://yehudakatz.com/2017/04/05/the-glimmer-vm-boots-fast-and-stays-fast/</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org2bee099" class="outline-3">
+<h3 id="org2bee099"><span class="section-number-3">1.5</span> More</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orga6d46f3" class="outline-4">
+<h4 id="orga6d46f3"><span class="section-number-4">1.5.1</span> Property based testing</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+<a href="https://medium.com/@gabescholz/randomized-testing-in-javascript-without-lifting-a-finger-8d616d7048af">https://medium.com/@gabescholz/randomized-testing-in-javascript-without-lifting-a-finger-8d616d7048af</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org095854e" class="outline-4">
+<h4 id="org095854e"><span class="section-number-4">1.5.2</span> CSS as Bytecode</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+<a href="https://github.com/rtfeldman/style-elements-demo/blob/master/src/Home.elm">https://github.com/rtfeldman/style-elements-demo/blob/master/src/Home.elm</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Marek</p>
+<p class="date">Created: 2017-11-13 Mon 15:37</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
