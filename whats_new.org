@@ -1,7 +1,18 @@
 * Reactive Conf 2017 Highlights
 
+#+attr_html: :width 100%
+[[./assets/reactive.png]]
 
-** David Nolen on Datomic and Simplicity
+** Go
+
+#+attr_html: :width 100%
+[[./assets/david_go.jpeg]]
+
+Game with David Nolen
+
+** Talks
+
+*** David Nolen on Datomic and Simplicity
 
 When considered next to testing and reasoning, simplicity
 is more important than either. Given a stark choice between investment
@@ -11,18 +22,15 @@ attempts of any kind.
 
 [[http://curtclifton.net/papers/MoseleyMarks06a.pdf][Out of the Tar Pit - Ben Moseley, Peter Marks (2006)]]
 
-*** Datomic
+**** Datomic
 
-Datomic is a distributed database and implementation of Datalog on Clojure.
+*Datomic* is a distributed database and implementation of Datalog on Clojure.
 Datalog is a declarative logic programming language that syntactically is a subset of Prolog
 https://en.wikipedia.org/wiki/Datomic
 
-*** Go
-#+attr_html: :width 100%
-[[./assets/david_go.jpeg]]
 
 
-** RON: Replicated Object Notation - Victor Grishchenko
+*** RON: Replicated Object Notation - Victor Grishchenko
 
 Argument against using JSON everywhere because:
 
@@ -30,9 +38,9 @@ Argument against using JSON everywhere because:
 - is bloated
 - weak (missin uuid [universally unique identifier], versioning..)
 
-*** Better ?
+**** Better ?
 
-Swarm Replicated Object Notation is a distributed data serialization format.
+*Swarm Replicated Object Notation* is a distributed data serialization format.
 Implicitly, formats like XML or JSON assume a lump of state being delivered from a server to a client -- once and in one piece.
 RON aims to synchronize replicas by delivering a stream of changes -- continuously and incrementally.
 With RON, even an object's state is seen as a batch of compacted changes, with more changes coming.
@@ -40,28 +48,34 @@ With RON, even an object's state is seen as a batch of compacted changes, with m
 https://github.com/gritzko/swarm-ron
 
 
-** Reason: JavaScript-flavored OCaml - Jared Forsyth
+*** Reason: JavaScript-flavored OCaml - Jared Forsyth
+
+#+attr_html: :width 100%
+[[./assets/reason.png]]
 
 https://reasonml.github.io/
 
-Caml (originally an acronym for Categorical abstract machine language) is a multi-paradigm, general-purpose programming language which is a dialect of the ML programming language family.
+*Caml* (originally an acronym for Categorical abstract machine language) is a multi-paradigm, general-purpose programming language which is a dialect of the ML programming language family.
 Caml was developed in France at INRIA and EN.S
 
-OCaml (Objective Caml) - implementation of Caml
+*OCaml* (Objective Caml) - implementation of Caml
 
-Reason - an alternate syntax (interface) for OCaml that uses Bucklescript compiler backend to output JS.
+*Reason* - an alternate syntax (interface) for OCaml that uses Bucklescript compiler backend to output JS.
 
-BuckleScript - A backend for the OCaml compiler which emits JavaScript.
+*BuckleScript* - A backend for the OCaml compiler which emits JavaScript.
+
+.
+.
+.
 
 JavaScript
 
 https://reasonml.github.io/guide/what-and-why
 
 
-*** Variant data type
+**** Variant data type
 
 #+BEGIN_EXAMPLE
-
 
 type account =
   | None
@@ -70,7 +84,6 @@ type account =
 
 let myAccount = Facebook("Josh", 26);
 let friendAccount = Instagram("Jenny");
-
 
 let greeting =
   switch myAccount {
@@ -82,7 +95,7 @@ let greeting =
 #+END_EXAMPLE
 
 
-*** undefined method `id' for nil:NilClass
+**** undefined method `id' for nil:NilClass
 
 #+BEGIN_EXAMPLE
 
@@ -94,10 +107,10 @@ This is the convention used to simulate a "nullable" (aka undefined or null) val
 Thanks to this convenience type definition, Reason can default every value to be non-nullable.
 An int will always be an int, never "int or null or undefined". If you do want to express a "nullable int", you'd use option(int),
  whose possible values are None or Some(int).
-switch forces you to handle both cases; therefore, a pure Reason program doesn't have null errors.
+switch forces you to handle both cases; therefore, *a pure Reason program doesn't have null errors*.
 
 
-** Secrets of the Glimmer VM - Tom Dale
+*** Secrets of the Glimmer VM - Tom Dale
 
 https://glimmerjs.com/
 
